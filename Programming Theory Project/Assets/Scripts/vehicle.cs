@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class vehicle : MonoBehaviour
+public abstract class vehicle : MonoBehaviour
 {
+    protected string myname {get; set;}
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,8 @@ public class vehicle : MonoBehaviour
     }
 
     protected void OnMouseDown() {
-        Debug.Log("This is vehicle");
+        MyName();
     }
+
+    protected abstract void MyName();
 }
